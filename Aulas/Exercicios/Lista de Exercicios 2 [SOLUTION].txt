@@ -1,0 +1,89 @@
+[Exercício 1] No Banco de Dados SENAC, na tabela cursos, deletar o campo
+descrição.
+
+USE senac;
+ALTER TABLE cursos
+DROP COLUMN descricao;
+
+[Exercício 2] No Banco de Dados SENAC, na tabela cursos, adicionar um
+campo com ano.
+
+ALTER TABLE cursos
+ADD COLUMN ano year;
+
+[Exercício 3] No Banco de Dados SENAC, na tabela alunos, alterar o
+nome da chave primaria de "matricula" para "id".
+
+ALTER TABLE alunos 
+CHANGE matricula id INT(11) NOT NULL AUTO_INCREMENT;
+
+[Exercício 4] Adicionar no Banco de Dados "SENAC", na tabela "alunos"
+o campo de "profissao" depois do nome. 
+
+USE senac;
+ALTER TABLE alunos
+ADD COLUMN profissao varchar(50) AFTER nome;
+
+[Exercício 5] Adicionar, pelo menos, 18 pessoas no Banco de Dados "SENAC", na 
+tabela "alunos". Contudo, com as seguintes regras:
+ 1) Deve haver alunos de ambos os sexos ('M' e 'F');
+ 2) Diferentes valores de peso (de 50.00 Kg até 150.00 Kg);
+ 3) Diferentes valores de altura (de 1.40 m até 2.20 m);
+ 4) Todas as profissões devem ser escolhidas da seguinte lista:
+	4.1) Ator;
+	4.2) Auxiliar Administrativo;
+	4.3) Dentista;
+	4.4) Empreendedor;
+	4.5) Farmacêutico
+	4.6) Médico;
+	4.7) Professor;
+	4.8) Programador.
+ 5) Outras cidades que não só Porto Alegre (Ex.: Viamão, Canoas, Santiago e etc).
+
+INSERT INTO alunos 
+VALUES 
+(DEFAULT, 'Kristina', 'Empreendedor', '1995-09-08', 'F', '58.3', '1.65', 'Vladvostok'), 
+(DEFAULT, 'Pedro', 'Programador', '1998-11-12', 'M', '93.1', '1.95', 'Rio de Janiero'),
+(DEFAULT, 'Kevin', 'Programador', '1996-10-24', 'M', '73.2', '1.94', DEFAULT),
+(DEFAULT, 'Alba', 'Dentista', '1964-04-13', 'F', '70.0', '1.68', DEFAULT),
+(DEFAULT, 'Valentina', 'Ator', '2000-03-12', 'F', '54.4', '1.54', 'Bogotá'),
+(DEFAULT, 'Yazan', 'Auxiliar Administrativo', '2002-01-15', 'M', '78.3', '1.73', 'Damascus'),
+(DEFAULT, 'Gustavo', 'Empreendedor', '2001-09-11', 'M', '77.5', '1.83', 'Porto Seguro'),
+(DEFAULT, 'Natália', 'Farmacêutico', '1998-02-06', 'F', '48.5', '1.48', 'Viamão'),
+(DEFAULT, 'Alia', 'Médico', '1980-05-12', 'F', '65.5', '1.67', 'Moscow'),
+(DEFAULT, 'Matheus', 'Professor', '1998-01-03', 'M', '87.1', '1.71', 'Maringá'),
+(DEFAULT, 'Dargilan', 'Professor', '2001-05-16', 'M', '83.1', '1.71', 'São José dos Campos'),
+(DEFAULT, 'Rodolfo', 'Programador', '2000-07-21', 'M', '100.12', '2.10', DEFAULT),
+(DEFAULT, 'Nikita', 'Ator', '1990-12-31', 'M', '112.5', '1.81', 'Moscow'),
+(DEFAULT, 'Igor', 'Empreendedor', '1994-11-10', 'M', '85.9', '1.69', 'Samara'),
+(DEFAULT, 'Yasmin', 'Empreendedor', '1995-01-15', 'F', '65.7', '1.65', DEFAULT),
+(DEFAULT, 'Guilherme', 'Médico', '1997-08-08', 'M', '87.3', '1.85', DEFAULT),
+(DEFAULT, 'Nuradin', 'Professor', '2000-12-25', 'M', '75.7', '1.68', 'Baku');
+
+
+[Exercício 6] Adicionar, pelo menos 5 cursos de programação.
+Contudo, com as seguintes regras:
+	1) O campo "ano" deve ser entre 2020 e 2022;
+	2) O campo "totaulas" dever ser no mínimo 10 e no máx 100.
+
+INSERT INTO cursos 
+(idcurso, nome, carga, totaulas, ano)
+VALUES 
+(DEFAULT, 'Python', '120', '40', '2022'),
+(DEFAULT, 'PHP', '40', '14', '2021'),
+(DEFAULT, 'Java Básico', '80', '20', '2022'),
+(DEFAULT, 'Java POO', '80', '10', '2020'),
+(DEFAULT, 'GitHub', '40', '20', '2022'),
+(DEFAULT, 'Algoritmo', '60', '10', '2021'),
+(DEFAULT, 'HTML5', '160', '40', '2022'),
+(DEFAULT, 'CSS', '160', '40', '2021'),
+(DEFAULT, 'Ruby', '109', '15', '2020'),
+(DEFAULT, 'C', '71', '30', '2021'),
+(DEFAULT, 'C++', '55', '30', '2020'),
+(DEFAULT, 'C#', '164', '30', '2022'),
+(DEFAULT, 'JavaScript', '139', '50', '2021'),
+(DEFAULT, 'R', '36', '30', '2022'),
+(DEFAULT, 'Fortran', '22', '100', '2020'),
+(DEFAULT, 'Photoshop', '10', '8', 2021),
+(DEFAULT, 'PHP4', '30', '11', 2020);
+

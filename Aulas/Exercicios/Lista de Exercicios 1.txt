@@ -1,0 +1,32 @@
+[Exercício 1] Crie uma Base de Dados
+chamada "SENAC". 
+
+[Exercício 2] Crie uma tabela com o nome 
+ALUNOS dos alunos do curso. A tabela deve
+conter as seguintes informações:
+1) Matrícula do aluno (PK);
+2) Nome do aluno (Obrigátorio);
+3) Data de Nascimento do aluno (Ano);
+4) Peso do aluno (Máx 999.00 Kg);
+5) Sexo do aluno (Homem/Mulher);
+6) Altura do aluno (Máx 9,99 m);
+7) Cidade em que aluno mora (Porto Alegre como padrão).
+
+[Exercício 3] Insira 3 alunos usando
+TODOS os campos expressos no código.
+
+[Exercício 4] Insira 3 alunos sem
+informar a matrícula do aluno.
+
+[Exercício 5] Insira 3 alunos sem 
+informar qual a cidade da qual eles vieram.
+
+[Exercício 6] Escreva uma instrução SQL 
+para inserir uma linha na tabela ALUNOS
+em relação à coluna do nome do aluno e
+a sua data de nascimento.
+
+[Exercício 7] Escreva uma instrução SQL 
+para copiar a tabela alunos e todos as 
+informações dentro dela dentro de uma 
+nova tabela.

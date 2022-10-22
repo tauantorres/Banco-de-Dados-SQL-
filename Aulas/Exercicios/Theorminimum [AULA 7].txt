@@ -1,0 +1,75 @@
+
+1)	CRIANDO UM BANCO DE DADOS:
+CREATE DATABASE SENAC
+DEFAULT CHARACTER SET utf8mb4
+DEFAULT COLLATE utf8mb4_general_ci;
+
+2)	CRIANDO UMA TABELA:
+USE SENAC;
+CREATE TABLE alunos(
+matricula int NOT NULL UNIQUE  AUTO_INCREMENT,
+nome varchar(30) NOT NULL,
+nascimento date,
+sexo enum('M', 'F'),
+peso decimal(5,2),
+altura decimal(3,2),
+cidade varchar(20) DEFAULT 'Porto Alegre',
+PRIMARY KEY (matricula)
+)DEFAULT CHARSET = UTF8mb4;
+
+3)	CRIANDO OUTRA TABELA:
+CREATE TABLE IF NOT EXISTS cursos (
+idcurso int NOT NULL UNIQUE AUTO_INCREMENT,
+nome varchar(30) NOT NULL UNIQUE,
+descricao text,
+carga int UNSIGNED,
+totaulas int,
+PRIMARY KEY (idcurso)
+) DEFAULT CHARSET = utf8mb4;
+
+
+
+4)	INSERINDO DADOS NA TABELA:
+INSERT INTO alunos 
+VALUES 
+(DEFAULT, 'Kristina', 'Empreendedor', '1995-09-08', 'F', '58.3', '1.65', 'Vladvostok'), 
+(DEFAULT, 'Pedro', 'Programador', '1998-11-12', 'M', '93.1', '1.95', 'Rio de Janiero'),
+(DEFAULT, 'Kevin', 'Programador', '1996-10-24', 'M', '73.2', '1.94', DEFAULT),
+(DEFAULT, 'Alba', 'Dentista', '1964-04-13', 'F', '70.0', '1.68', DEFAULT),
+(DEFAULT, 'Valentina', 'Ator', '2000-03-12', 'F', '54.4', '1.54', 'Bogotá'),
+(DEFAULT, 'Yazan', 'Auxiliar Administrativo', '2002-01-15', 'M', '78.3', '1.73', 'Damascus'),
+(DEFAULT, 'Gustavo', 'Empreendedor', '2001-09-11', 'M', '77.5', '1.83', 'Porto Seguro'),
+(DEFAULT, 'Natália', 'Farmacêutico', '1998-02-06', 'F', '48.5', '1.48', 'Viamão'),
+(DEFAULT, 'Alia', 'Médico', '1980-05-12', 'F', '65.5', '1.67', 'Moscow'),
+(DEFAULT, 'Matheus', 'Professor', '1998-01-03', 'M', '87.1', '1.71', 'Maringá'),
+(DEFAULT, 'Dargilan', 'Professor', '2001-05-16', 'M', '83.1', '1.71', 'São José dos Campos'),
+(DEFAULT, 'Rodolfo', 'Programador', '2000-07-21', 'M', '100.12', '2.10', DEFAULT),
+(DEFAULT, 'Nikita', 'Ator', '1990-12-31', 'M', '112.5', '1.81', 'Moscow'),
+(DEFAULT, 'Igor', 'Empreendedor', '1994-11-10', 'M', '85.9', '1.69', 'Samara'),
+(DEFAULT, 'Yasmin', 'Empreendedor', '1995-01-15', 'F', '65.7', '1.65', DEFAULT),
+(DEFAULT, 'Guilherme', 'Médico', '1997-08-08', 'M', '87.3', '1.85', DEFAULT),
+(DEFAULT, 'Nuradin', 'Professor', '2000-12-25', 'M', '75.7', '1.68', 'Baku');
+
+5)	INSERINDO DADOS NA OUTRA TABELA:
+INSERT INTO cursos 
+(idcurso, nome, carga, totaulas, ano)
+VALUES 
+(DEFAULT, 'Python', '120', '40', '2022'),
+(DEFAULT, 'PHP', '40', '14', '2021'),
+(DEFAULT, 'Java Básico', '80', '20', '2022'),
+(DEFAULT, 'Java POO', '80', '10', '2020'),
+(DEFAULT, 'GitHub', '40', '20', '2022'),
+(DEFAULT, 'Algoritmo', '60', '10', '2021'),
+(DEFAULT, 'HTML5', '160', '40', '2022'),
+(DEFAULT, 'CSS', '160', '40', '2021'),
+(DEFAULT, 'Ruby', '109', '15', '2020'),
+(DEFAULT, 'C', '71', '30', '2021'),
+(DEFAULT, 'C++', '55', '30', '2020'),
+(DEFAULT, 'C#', '164', '30', '2022'),
+(DEFAULT, 'JavaScript', '139', '50', '2021'),
+(DEFAULT, 'R', '36', '30', '2022'),
+(DEFAULT, 'Fortran', '22', '100', '2020'),
+(DEFAULT, 'Photoshop', '10', '8', 2021),
+(DEFAULT, 'PHP4', '30', '11', 2020);
+
+

@@ -1,0 +1,36 @@
+[Exercício 1] No Banco de Dados SENAC, na tabela cursos, deletar o campo
+descrição.
+
+
+[Exercício 2] No Banco de Dados SENAC, na tabela cursos, adicionar um
+campo com ano.
+
+
+[Exercício 3] No Banco de Dados SENAC, na tabela alunos, alterar o
+nome da chave primaria de "matricula" para "id".
+
+
+[Exercício 4] Adicionar no Banco de Dados "SENAC", na tabela "alunos"
+o campo de "profissao" depois do nome. 
+
+
+[Exercício 5] Adicionar, pelo menos, 18 pessoas no Banco de Dados "SENAC", na 
+tabela "alunos". Contudo, com as seguintes regras:
+1) Deve haver alunos de ambos os sexos ('M' e 'F');
+2) Diferentes valores de peso (de 50.00 Kg até 150.00 Kg);
+3) Diferentes valores de altura (de 1.40 m até 2.20 m);
+4) Todas as profissões devem ser escolhidas da seguinte lista:
+	4.1) Ator;
+	4.2) Auxiliar Administrativo;
+	4.3) Dentista;
+	4.4) Empreendedor;
+	4.5) Farmacêutico
+	4.6) Médico;
+	4.7) Professor;
+	4.8) Programador.
+5) Outras cidades que não só Porto Alegre (Ex.: Viamão, Canoas, Santiago e etc).
+
+[Exercício 6] Adicionar, pelo menos 5 cursos de programação.
+Contudo, com as seguintes regras:
+1) O campo "ano" deve ser entre 2020 e 2022;
+2) O campo "totaulas" dever ser no mínimo 10 e no máx 100.
